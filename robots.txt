@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digitalease.ch/sitemap.xml

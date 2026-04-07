@@ -47,25 +47,6 @@ body {
 }
 
 /* Sections */
-.intro {
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 30px;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
-.intro h2 {
-  color: #333;
-  margin-top: 20px;
-}
-
-.intro ul {
-  margin-left: 20px;
-}
-
-.intro li {
-  margin: 10px 0;
-}
 
 /* Contact Section */
 .contact b {
@@ -130,15 +111,16 @@ section.active .accordion-header::before {
 }
 
 .accordion-content {
+  display: block;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
-  opacity: 1;
-  max-height: 1000px;
-}
-
-.accordion-content[style*="display: none"] {
   opacity: 0;
   max-height: 0;
+}
+
+section.active .accordion-content {
+  opacity: 1;
+  max-height: 1000px;
 }
 
 section {
@@ -177,15 +159,10 @@ section li {
   main {
     padding: 15px;
   }
-  
-  .intro {
-    padding: 20px;
-  }
 }
 
 @media (max-width: 768px) {
   .header-grid {
-    grid-template-columns: 1fr;
     padding: 20px 15px;
     gap: 15px;
   }
@@ -211,23 +188,10 @@ section li {
     padding: 12px;
   }
   
-  .intro {
-    padding: 15px;
-    margin: 15px 0;
-  }
-  
-  .intro h2 {
-    font-size: 1.3em;
-  }
-  
-  .intro ul {
-    margin-left: 15px;
-  }
 }
 
 @media (max-width: 480px) {
   .header-grid {
-    grid-template-columns: 1fr;
     padding: 15px 10px;
     gap: 10px;
   }
@@ -251,30 +215,6 @@ section li {
   main {
     max-width: 100%;
     padding: 10px;
-  }
-  
-  .intro {
-    padding: 12px;
-    margin: 10px 0;
-  }
-  
-  .intro p {
-    font-size: 0.95em;
-    line-height: 1.4;
-  }
-  
-  .intro h2 {
-    font-size: 1.1em;
-  }
-  
-  .intro ul {
-    margin-left: 12px;
-    padding: 0;
-  }
-  
-  .intro li {
-    margin: 8px 0;
-    font-size: 0.95em;
   }
   
   .contact {

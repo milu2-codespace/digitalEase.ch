@@ -99,15 +99,14 @@ footer p {
   content: '▶';
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10px;
   font-size: 0.9em;
   transition: transform 0.3s ease;
   color: #aac5f8;
 }
 
 section.active .accordion-header::before {
-  transform: translateY(-50%) rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .accordion-header:hover {

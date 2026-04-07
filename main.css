@@ -18,20 +18,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
+  position: relative;
 }
 .header-image {
-  background-image: url('digitalEaseLogo.png');
+  background-image: url('digitalEaseLogo1412x216.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 400px;
+  height: 200px;
   width: 100%;
-  margin-bottom: -150px;
+  order: 1;
+  z-index: 2;
 }
 .header-content {
-  padding: 0 0 10px 0px;
+  padding: 30px 20px 10px;
   text-align: center;
+  order: 2;
+  z-index: 1;
+  position: relative;
 }
 
 .header-content h1 {
@@ -141,11 +146,13 @@ section li {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .header-grid {
-    padding: 30px 15px;
+    padding: 20px 15px;
+    gap: 0;
   }
   
   .header-image {
     height: 250px;
+    margin-bottom: -80px;
   }
   
   .header-content h1 {
@@ -163,12 +170,17 @@ section li {
 
 @media (max-width: 768px) {
   .header-grid {
-    padding: 20px 15px;
-    gap: 15px;
+    padding: 15px;
+    gap: 0;
   }
   
   .header-image {
     height: 200px;
+    margin-bottom: 0;
+  }
+  
+  .header-content {
+    padding: 15px 10px 10px;
   }
   
   .header-content h1 {
@@ -177,10 +189,6 @@ section li {
   
   .header-content h2 {
     font-size: 1em;
-  }
-  
-  .header-content {
-    padding: 10px;
   }
   
   main {
@@ -192,12 +200,17 @@ section li {
 
 @media (max-width: 480px) {
   .header-grid {
-    padding: 15px 10px;
-    gap: 10px;
+    padding: 10px;
+    gap: 0;
   }
   
   .header-image {
     height: 150px;
+    margin-bottom: 0;
+  }
+  
+  .header-content {
+    padding: 10px;
   }
   
   .header-content h1 {
@@ -206,10 +219,6 @@ section li {
   
   .header-content h2 {
     font-size: 0.9em;
-  }
-  
-  .header-content {
-    padding: 5px;
   }
   
   main {

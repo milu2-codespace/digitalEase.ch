@@ -17,38 +17,33 @@ body {
 .header-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   position: relative;
+  padding: 20px;
 }
-.header-image {
-  background-image: url('digitalEaseLogo1412x216.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 200px;
-  width: 100%;
-  order: 1;
-  z-index: 2;
+.header-logo {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
 }
 .header-content {
-  padding: 30px 20px 10px;
-  text-align: center;
-  order: 2;
-  z-index: 1;
+  padding: 0;
+  text-align: left;
   position: relative;
 }
 
 .header-content h1 {
   font-size: 2em;
-  margin: 0;
+  margin: 0 0 10px 0;
   color: #333;
 }
 
 .header-content h2 {
-  font-size: 1.5em;
-  margin: 10px 0 0 0;
+  font-size: 1.2em;
+  margin: 0;
   color: #666;
+  font-weight: 500;
 }
 
 /* Sections */

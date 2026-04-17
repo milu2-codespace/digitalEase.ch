@@ -7,12 +7,11 @@ body {
   padding: 0;
 }
 
-/* Header mit Hintergrundbild */
+/* Header mit Logo */
 .header-index {
   margin-top: 0;
   background-color: #aac5f8;
 }
-
 
 .header-grid {
   display: flex;
@@ -47,6 +46,22 @@ body {
 }
 
 /* Sections */
+
+/* about Me Section */
+.about-header .profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 0 1.5rem 0; /* linksbündig */
+  /* margin: 0 auto 1.5rem auto; zentriert */
+}
+.intro-text {
+  font-weight: 600;      /* fett */
+  font-style: italic;    /* kursiv */
+  color: #aac5f8;        /* gleiche Farbe wie Header-Background */
+  margin: 0;             /* optional: verhindert unnötigen Abstand */
+}
 
 
 /* Contact Section */
@@ -138,9 +153,9 @@ section li {
   margin: 10px 0;
 }
 
-/* 404-error Fehlerseiten */
+/* 404-error Fehlerseiten
 
-.error-container {
+ .error-container {
   text-align: center;
   padding: 60px 20px;
 }
@@ -159,6 +174,7 @@ section li {
 .error-link a {
   text-decoration: underline;
 }
+   */
 
 /* Responsive Design */
 @media (max-width: 1024px) {

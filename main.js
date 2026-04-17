@@ -1,3 +1,18 @@
+// Navigation Toggle (Burger-Menü)
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const navList = document.querySelector('#nav-list');
+
+  if (toggle && navList) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !expanded);
+      navList.classList.toggle('open');
+    });
+  }
+});
+
+// Accordions
 document.addEventListener('DOMContentLoaded', function() {
   const yearElement = document.getElementById('year');
   if (yearElement) {

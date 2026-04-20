@@ -19,14 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
     yearElement.textContent = new Date().getFullYear();
   }
 
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  const accordionTriggers = document.querySelectorAll('.accordion-trigger');
 
-  accordionHeaders.forEach(header => {
+  accordionTriggers.forEach(trigger => {
+    trigger.setAttribute('aria-expanded', 'false');
+    /*
     header.setAttribute('role', 'button');
     header.setAttribute('tabindex', '0');
     header.setAttribute('aria-expanded', 'false');
-
-    const section = header.closest('section');
+ */
+    const section = trigger.closest('section');
     const content = section.querySelector('.accordion-content');
 
     function toggleAccordion() {
@@ -34,8 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
       header.setAttribute('aria-expanded', isActive ? 'true' : 'false');
     }
 
-    header.addEventListener('click', toggleAccordion);
-    header.addEventListener('keydown', event => {
+    trigger.addEventListener('click', toggleAccordion);
+    
+    trigger.addEventListener('keydown', event => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
         toggleAccordion();

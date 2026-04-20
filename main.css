@@ -177,7 +177,7 @@ footer p {
 }
 
 /* Accordion Styles */
-.accordion-header {
+.accordion-trigger {
   color: #333;
   margin-top: 0;
   margin-bottom: 0;
@@ -189,6 +189,7 @@ footer p {
   padding-left: 35px;
 }
 
+/* not w3 conform
 .accordion-header::before {
   content: '▶';
   position: absolute;
@@ -204,6 +205,38 @@ section.active .accordion-header::before {
 }
 
 .accordion-header:hover {
+  color: #aac5f8;
+  text-shadow: 0 0 5px rgba(232, 200, 240, 0.3);
+}
+not w3 conform */
+
+.accordion-trigger {
+  all: unset;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 0 10px 35px;
+  color: #333;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+}
+
+.accordion-trigger::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 0.9em;
+  transition: transform 0.3s ease;
+  color: #aac5f8;
+}
+
+section.active .accordion-trigger::before {
+  transform: rotate(90deg);
+}
+
+.accordion-trigger:hover {
   color: #aac5f8;
   text-shadow: 0 0 5px rgba(232, 200, 240, 0.3);
 }
